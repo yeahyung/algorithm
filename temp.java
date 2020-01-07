@@ -1,9 +1,11 @@
+package algorithm;
+
 import java.io.*;
 import java.util.*;
 
-class data{
+class data1{
     int x, y;
-    public data(int x,int y) {
+    public data1(int x,int y) {
         this.x = x;
         this.y = y;
     }
@@ -52,13 +54,13 @@ public class temp {
     }
 
     public static void bfs(int xx, int yy){
-        Queue<data> q = new LinkedList<data>();
-        q.add(new data(xx,yy));
+        Queue<data1> q = new LinkedList<data1>();
+        q.add(new data1(xx,yy));
 
         int count=0;
 
         while(!q.isEmpty()){
-            data front = q.remove();
+            data1 front = q.remove();
             int x = front.x;
             int y = front.y;
 
@@ -72,7 +74,7 @@ public class temp {
                     continue;
                 if(map[tempX][tempY]!=0){
                     map[tempX][tempY]=0;
-                    q.add(new data(tempX,tempY));
+                    q.add(new data1(tempX,tempY));
                 }
             }
         }
